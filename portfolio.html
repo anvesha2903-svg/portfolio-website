@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anvesha Singh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b13;
+      color: #e0e0e0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+
+    /* ===== Header / Navbar ===== */
+    header {
+      background: rgba(15, 15, 25, 0.95);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 5%;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #a78bfa;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+
+
+    nav ul li a {
+      color: #ccc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #a78bfa;
+    }
+
+    /* ===== Hero Section ===== */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0b0b13, #1a1a2e);
+      text-align: center;
+      padding: 0 10%;
+    }
+
+    #home h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #ffffff;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      color: #b3b3b3;
+      margin-top: 10px;
+      max-width: 600px;
+    }
+
+    #home .btn {
+      margin-top: 30px;
+      background: #a78bfa;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    #home .btn:hover {
+      background: #8b5cf6;
+    }
+
+    /* ===== About Section ===== */
+    #about {
+      background: linear-gradient(135deg, #0b0b13, #1a1a2e);
+      color: #e0e0e0;
+      padding: 100px 10%;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #a78bfa;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    #about h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #a78bfa;
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+    .about-content img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 3px solid #a78bfa;
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-content img {
+  background: radial-gradient(circle, #a78bfa 0%, #1a1a2e 100%);
+  border-radius: 50%;
+  padding: 5px; /* Creates the background ring */
+}
+
+.about-content img {
+  border: 3px solid #a78bfa;
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.4);
+}
+
+
+    .about-content img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(167, 139, 250, 0.6);
+    }
+
+    .about-text {
+      max-width: 600px;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .about-text strong {
+      color: #a78bfa;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    /* ===== Skills Section ===== */
+    #skills {
+      background: #101021;
+      padding: 100px 10%;
+      text-align: center;
+    }
+
+    #skills h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #a78bfa;
+      margin-bottom: 50px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skill-card {
+      background: #1a1a2e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
+    }
+
+    /* ===== Resume Section ===== */
+    #resume {
+      background: linear-gradient(135deg, #0b0b13, #1a1a2e);
+      padding: 100px 10%;
+      text-align: center;
+    }
+
+    #resume h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #a78bfa;
+      margin-bottom: 40px;
+    }
+
+    .resume-box {
+      max-width: 700px;
+      margin: auto;
+      background: #161623;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      text-align: left;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .resume-box h3 {
+      color: #a78bfa;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .resume-box a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #a78bfa;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .resume-box a:hover {
+      background: #8b5cf6;
+    }
+   
+    /* ===== ACHIEVEMENTS SECTION ===== */
+.achievements {
+  background-color: #0f0f1a;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.achievements h2 {
+  color: #c4b5fd;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(167, 139, 250, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.05);
+}
+
+.achievement-card:hover {
+  transform: scale(1.03);
+  border-color: #a78bfa;
+  box-shadow: 0 0 35px rgba(167, 139, 250, 0.3);
+}
+
+.certificate-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.5));
+}
+
+.achievement-card h3 {
+  color: #e0e7ff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  color: #d4d4d8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+}
+
+/* === Projects Section === */
+#projects {
+  padding: 80px 10%;
+  background-color: #0b0014; /* deep black base */
+  color: #eee;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out both;
+  border-top: 1px solid #3a0061;
+  border-bottom: 1px solid #3a0061;
+}
+
+#projects h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #b37aff; /* soft violet accent */
+  letter-spacing: 1px;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1em;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* === Grid Layout === */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* === Project Cards === */
+.project-card {
+  background: #12001f; /* black with violet tint */
+  border: 1px solid #4d1b7b;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(179, 122, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+.project-card h3 {
+  color: #c8a2ff;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* === Hover Animation === */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(200, 162, 255, 0.5);
+  border-color: #c8a2ff;
+}
+
+/* === Fade-in Animation === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+    /* ===== Contact Section ===== */
+    #contact {
+      background: #101021;
+      padding: 100px 10%;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #a78bfa;
+      margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #1a1a2e;
+      color: white;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #999;
+    }
+
+    button {
+      background: #a78bfa;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #8b5cf6;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0b0b13;
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #1a1a2e;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; gap: 15px; }
+      .about-content { flex-direction: column; text-align: center; }
+      .about-text { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Anvesha Singh</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home">
+    <h1>Hello, I'm <span style="color:#a78bfa;">Anvesha Singh</span></h1>
+    <p>A passionate B.Tech Computer Science Engineering student exploring web design, coding, and creativity to build elegant digital experiences.</p>
+    <a href="#about" class="btn">Know More</a>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="profile.png" alt="Anvesha Singh">
+      <div class="about-text">
+        <p>Hello! I’m <strong>Anvesha Singh</strong>, a first-year B.Tech student at <strong>ITM University, Gwalior</strong>, specializing in <strong>Artificial Intelligence and Machiene Learning</strong>. I’m passionate about blending creativity and logic to design solutions that make technology more meaningful and human-centered.</p>
+        <p>As I begin my journey into the tech world, I’m developing a strong foundation in programming, web development, and data structures. I love exploring how intelligent systems work and how design can make technology both powerful and beautiful.</p>
+        <p>Outside of academics, I enjoy experimenting with new design ideas, reading about modern innovations in AI, and constantly learning something new each day. My goal is to grow into a developer who creates projects that not only function well but also look elegant and inspiring.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">C Programming</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">Problem Solving</div>
+    </div>
+  </section>
+
+  <!-- ===== Resume Section ===== -->
+  <section id="resume">
+    <h2>My Resume</h2>
+    <div class="resume-box">
+      <h3>Anvesha Singh</h3>
+      <p><strong>Email:</strong> anvesha2903@gmail.com<br>
+      <strong>Phone:</strong> +91 9343247187<br>
+      <strong>Location:</strong> Gwalior, India</p>
+      <hr style="border:none; border-top:1px solid #333; margin:15px 0;">
+      <h4>Objective</h4>
+      <p>To develop strong technical foundations and creative problem-solving skills in the field of Artificial Intelligence, while gaining practical exposure through projects and collaborations.</p>
+      <h4>Education</h4>
+      <p>B.Tech in Artificial Intelligence – ITM University, Gwalior (2025–2029)</p>
+      <p>Higher Secondary School - Bal Bharati School, Rewa (2024-2025)</p>
+      <p>Secondary School - Bal Bharati School, Rewa (2022-2023)</p>
+      <h4>Technical Skills</h4>
+      <ul>
+        <li>Languages: C, Python</li>
+        <li>Web Development: HTML, CSS</li>
+        <li>Tools: VS Code, GitHub (Beginner)</li>
+      </ul>
+      <h4>Academic Project</h4>
+      <p><strong>Portfolio Website (Web Tech PBL)</strong> — Designed and developed a personal portfolio using HTML and CSS.</p>
+      
+    </div>
+  </section>
+
+  <section id="achievements" class="achievements">
+  <div class="container">
+    <h2>Achievements</h2>
+    
+    <div class="achievement-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Certificate Icon" class="certificate-icon">
+      <h3>Google Certificate of Participation</h3>
+      <p>🏅 Secured <strong>3rd Rank</strong> in Google’s Certificate of Participation Program (2025).</p>
+      <a href="google_certificate.pdf" target="_blank" class="btn">View Certificate</a>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Upcoming Projects</h2>
+    <p>Currently learning and exploring new technologies. Exciting projects will be added soon!</p> </br> </br>
+    <div class="projects-container">
+  <div class="project-card">Portfolio Website</br>
+             (Web Technology)</div>
+  <div class="project-card">AI Email Sorter</br>
+             (Python)</div>
+  
+</div>
+
+  </section>
+
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Anvesha Singh | Designed with 💜 using HTML & CSS
+  </footer>
+
+</body>
+</html>
